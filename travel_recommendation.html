@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelQuest</title>
+    <link rel="stylesheet" href="./travel_recommendation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="overlay"></div>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <i class="fas fa-globe logo"></i>
+                <h1 class="site-name">TravelQuest</h1>
+            </div>
+            <ul class="navbar-center">
+                <li><a href="./index.html" id="home">Home</a></li>
+                <li><a href="./about_us.html" id="about">About Us</a></li>
+                <li><a href="./contact_us.html" id="contact">Contact Us</a></li>
+            </ul>
+            <div class="navbar-right">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
+                    <button id='btnSearch'><i class="fas fa-search"></i> Search</button>
+                    <button id='btnReset'><i class="fas fa-times"></i> Clear</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="left-section">
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="content">
+                <h2>Your Next Adventure Awaits</h2>
+                <p>Discover amazing destinations, explore new cultures, and make unforgettable memories with TravelQuest. Whether you're looking for a relaxing getaway or an action-packed adventure, we have something for everyone.</p>
+                <button id="btnBookNow" onclick="location.href='./contact_us.html'">Book Now</button>
+            </div>
+        </div>
+        <div class="right-section">
+            <!-- This section will be empty for now -->
+        </div>
+    </div>
+</body>
+</html>
