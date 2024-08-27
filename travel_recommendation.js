@@ -14,7 +14,8 @@ document.getElementById('btnSearch').addEventListener('click', function () {
                         results.push({
                             name: city.name,
                             imageUrl: city.imageUrl,
-                            description: city.description
+                            description: city.description,
+                            timeZone: city.timeZone
                         });
                     });
                 }
@@ -25,7 +26,8 @@ document.getElementById('btnSearch').addEventListener('click', function () {
                     results.push({
                         name: temple.name,
                         imageUrl: temple.imageUrl,
-                        description: temple.description
+                        description: temple.description,
+                        timeZone: temple.timeZone
                     });
                 });
             }
@@ -35,7 +37,8 @@ document.getElementById('btnSearch').addEventListener('click', function () {
                     results.push({
                         name: beach.name,
                         imageUrl: beach.imageUrl,
-                        description: beach.description
+                        description: beach.description,
+                        timeZone: beach.timeZone
                     });
                 });
             }
@@ -55,7 +58,7 @@ function displayResults(results) {
     resultsContainer.innerHTML = '';
 
     if (results.length === 0) {
-        resultsContainer.innerHTML = '<p>No results found.</p>';
+        resultsContainer.innerHTML = '<p style="color: white;">No results found.</p>';
         return;
     }
 
@@ -72,6 +75,14 @@ function displayResults(results) {
         
         const description = document.createElement('p');
         description.textContent = result.description;
+
+        if (result.timeZone) {
+            const localTime = getLocalTime(result.timeZone);
+            const timeElement = document.createElement('p');
+            timeElement.textContent = `Local time: ${localTime}`;
+            timeElement.style.fontStyle = 'italic';
+            card.appendChild(timeElement);
+        }
         
         const visitButton = document.createElement('button');
         visitButton.textContent = 'Visit';
@@ -87,3 +98,22 @@ function displayResults(results) {
         resultsContainer.appendChild(card);
     });
 }
+
+function getLocalTime(timeZone) {
+    const options = { 
+        timeZone: timeZone, 
+        hour12: true, 
+        hour: 'numeric', 
+        minute: 'numeric', 
+        second: 'numeric' 
+    };
+    return new Date().toLocaleTimeString('en-US', options);
+}
+
+function clearSearchResults() {
+    const resultsContainer = document.getElementById('results-container');
+    resultsContainer.innerHTML = '';
+}
+
+const clearButton = document.getElementById('btnReset');
+clearButton.addEventListener('click', clearSearchResults);
