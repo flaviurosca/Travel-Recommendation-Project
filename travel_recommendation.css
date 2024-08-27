@@ -1,193 +1,3 @@
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: url('./images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(0, 128, 128, 0.6), rgba(0, 128, 128, 0));
-    z-index: 1;
-}
-
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
-    padding: 10px;
-    color: white;
-    z-index: 2;
-    position: relative;
-}
-
-.navbar-left {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    font-size: 30px;
-    margin-right: 10px;
-    color: white;
-}
-
-.site-name {
-    font-size: 24px;
-    margin: 0;
-    color: white;
-}
-
-.navbar-center {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.navbar-center li {
-    margin: 0 20px;
-}
-
-.navbar-center a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.navbar-center a:hover {
-    text-decoration: underline;
-}
-
-.navbar-right {
-    display: flex;
-    align-items: center;
-}
-
-.search-container {
-    display: flex;
-    align-items: center;
-    border-radius: 15px;
-    overflow: hidden;
-    background-color: white;
-    padding: 5px;
-}
-
-#searchInput {
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    flex: 1;
-    min-width: 300px;
-    border-radius: 10px;
-    color: #008080;
-}
-
-.search-container button {
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    background-color: #008080;
-    color: white;
-    cursor: pointer;
-    outline: none;
-    margin-left: 5px;
-    border-radius: 5px;
-}
-
-.search-container button:hover {
-    background-color: #007373;
-}
-
-.search-container button i {
-    margin-right: 5px;
-    font-size: 16px;
-}
-
-.main-container {
-    display: flex;
-    height: calc(100vh - 60px);
-    position: relative;
-    z-index: 2;
-}
-
-.left-section, .right-section {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.left-section {
-    color: white;
-}
-
-.content {
-    text-align: center;
-    max-width: 60%;
-    padding: 20px;
-}
-
-.content h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.content p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    line-height: 1.5;
-}
-
-#btnBookNow {
-    padding: 10px 20px;
-    font-size: 18px;
-    border: none;
-    background-color: #008080;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-#btnBookNow:hover {
-    background-color: #007373;
-}
-
-.social-media {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.social-media a {
-    color: white;
-    font-size: 24px;
-    margin: 10px 0;
-    text-decoration: none;
-}
-
-.social-media a:hover {
-    color: #007373;
-}
-
-.right-section {
-    /* Empty for now */
-/* }  */
-
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -373,11 +183,6 @@ body {
     color: #007373;
 }
 
-.right-section {
-    /* Empty for now */
-}
-
-/* About Us Page Specific Styles */
 .main-content {
     position: relative;
     z-index: 2;
@@ -433,4 +238,137 @@ body {
 .team-member p {
     font-size: 16px;
     margin: 0;
+}
+
+.contact-form {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    color: white;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+}
+
+.contact-form h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0);
+    box-sizing: border-box; 
+    color: white;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    padding: 10px 0;
+    background-color: #008080;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+.contact-form button:hover {
+    background-color: #007373;
+}
+
+.right-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(100vh - 60px);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.result-card {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.result-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.result-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.result-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.result-card button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #008080;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.result-card button:hover {
+    background-color: #007373;
 }
